@@ -1,0 +1,145 @@
+{
+  "day": {
+    "status": 200,
+    "period": "day",
+    "rangeStart": "2026-07-17T19:30:00.000Z",
+    "rangeEnd": "2026-07-18T19:29:59.999Z",
+    "incomeTotal": 0,
+    "expenseTotal": 0,
+    "totalStudents": 0,
+    "cashFlow": {
+      "buckets": 24,
+      "nonZero": 0,
+      "sample": [],
+      "emptyReason": "no_income_or_expense_in_range"
+    },
+    "enrollment": {
+      "buckets": 24,
+      "nonZero": 0,
+      "sample": [],
+      "emptyReason": "no_student_or_teacher_created_in_range"
+    },
+    "expenseBreakdown": {
+      "count": 0,
+      "sample": [],
+      "emptyReason": "no_expenses_in_range"
+    }
+  },
+  "month": {
+    "status": 200,
+    "period": "month",
+    "rangeStart": "2026-06-30T19:30:00.000Z",
+    "rangeEnd": "2026-07-18T19:29:59.999Z",
+    "incomeTotal": 4000,
+    "expenseTotal": 0,
+    "totalStudents": 2,
+    "cashFlow": {
+      "buckets": 31,
+      "nonZero": 1,
+      "sample": [
+        {
+          "year": 2026,
+          "month": 7,
+          "day": 14,
+          "income": 4000,
+          "expenses": 0
+        }
+      ],
+      "emptyReason": null
+    },
+    "enrollment": {
+      "buckets": 31,
+      "nonZero": 1,
+      "sample": [
+        {
+          "year": 2026,
+          "month": 7,
+          "day": 14,
+          "students": 2,
+          "teachers": 0
+        }
+      ],
+      "emptyReason": null
+    },
+    "expenseBreakdown": {
+      "count": 0,
+      "sample": [],
+      "emptyReason": "no_expenses_in_range"
+    }
+  },
+  "year": {
+    "status": 200,
+    "period": "year",
+    "rangeStart": "2025-12-31T19:30:00.000Z",
+    "rangeEnd": "2026-07-18T19:29:59.999Z",
+    "incomeTotal": 106000,
+    "expenseTotal": 17374,
+    "totalStudents": 115,
+    "cashFlow": {
+      "buckets": 7,
+      "nonZero": 4,
+      "sample": [
+        {
+          "year": 2026,
+          "month": 4,
+          "income": 0,
+          "expenses": 4350
+        },
+        {
+          "year": 2026,
+          "month": 5,
+          "income": 0,
+          "expenses": 3822
+        },
+        {
+          "year": 2026,
+          "month": 6,
+          "income": 102000,
+          "expenses": 9202
+        }
+      ],
+      "emptyReason": null
+    },
+    "enrollment": {
+      "buckets": 7,
+      "nonZero": 2,
+      "sample": [
+        {
+          "year": 2026,
+          "month": 6,
+          "students": 113,
+          "teachers": 11
+        },
+        {
+          "year": 2026,
+          "month": 7,
+          "students": 2,
+          "teachers": 0
+        }
+      ],
+      "emptyReason": null
+    },
+    "expenseBreakdown": {
+      "count": 4,
+      "sample": [
+        {
+          "category": "Salary",
+          "total": 6000
+        },
+        {
+          "category": "Utilities",
+          "total": 4350
+        },
+        {
+          "category": "Supplies",
+          "total": 3822
+        },
+        {
+          "category": "Maintenance",
+          "total": 3202
+        }
+      ],
+      "emptyReason": null
+    }
+  }
+}

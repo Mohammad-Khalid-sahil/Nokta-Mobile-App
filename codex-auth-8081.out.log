@@ -1,0 +1,29 @@
+{"ts":"2026-07-13T05:01:45.786Z","level":"info","message":"Backend server started","metadata":{"host":"0.0.0.0","port":8081,"environment":"development","lanIp":"10.251.3.245","mobileApiUrl":"http://10.251.3.245:8081/api","database":"connected","integrations":{"email":"console","sms":"console","stripe":{"enabled":false,"liveReady":false,"mode":"sandbox"},"ai":{"enabled":false,"configured":false},"strict":false,"issues":[]}}}
+
+====================================
+SERVER STARTED SUCCESSFULLY
+====================================
+
+Host bind: 0.0.0.0
+Port: 8081
+Environment: development
+
+Network diagnostics:
+  ✓ Server Port: 8081
+  ✓ Server IP (LAN): 10.251.3.245
+  ✓ API URL (local): http://127.0.0.1:8081/api
+  ✓ Mobile Access URL: http://10.251.3.245:8081/api
+  ✓ Database: Connected (nokta_academy)
+  ✓ Server: Running
+
+Use this URL on physical phones (same Wi-Fi):
+  http://10.251.3.245:8081/api
+
+====================================
+
+[2026-07-13 09:31:52]
+POST /api/auth/login
+Client: 10.251.3.245
+Status: 401
+Duration: 14ms
+

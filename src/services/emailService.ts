@@ -1,0 +1,120 @@
+import nodemailer, { type Transporter } from 'nodemailer';
+import { integrationConfig, isEmailConfigured } from '../config/integrations';
+import { logger } from '../utils/logger';
+
+export type EmailPayload = {
+  to: string;
+  subject: string;
+  text: string;
+  html?: string;
+};
+
+let transporter: Transporter | null = null;
+
+function getTransporter() {
+  if (transporter) return transporter;
+  const { smtp } = integrationConfig.email;
+  transporter = nodemailer.createTransport({
+    host: smtp.host,
+    port: smtp.port,
+    secure: smtp.secure,
+    auth: smtp.user ? { user: smtp.user, pass: smtp.pass } : undefined
+  });
+  return transporter;
+}
+
+export class EmailService {
+  async send(payload: EmailPayload) {
+    if (!integrationConfig.email.enabled || integrationConfig.email.mode === 'disabled') {
+      return { delivered: false, channel: 'email', reason: 'email_disabled' };
+    }
+
+    if (!payload.to) {
+      return { delivered: false, channel: 'email', reason: 'missing_recipient' };
+    }
+
+    if (integrationConfig.email.mode === 'console') {
+      logger.info('Email (console mode)', {
+        to: payload.to,
+        subject: payload.subject,
+        preview: payload.text.slice(0, 240)
+      });
+      return { delivered: true, channel: 'email', mode: 'console' };
+    }
+
+    if (!isEmailConfigured()) {
+      return { delivered: false, channel: 'email', reason: 'smtp_not_configured' };
+    }
+
+    await getTransporter().sendMail({
+      from: integrationConfig.email.from,
+      replyTo: integrationConfig.email.replyTo || undefined,
+      to: payload.to,
+      subject: payload.subject,
+      text: payload.text,
+      html: payload.html ?? payload.text
+    });
+
+    return { delivered: true, channel: 'email', mode: 'smtp' };
+  }
+
+  buildVerificationUrl(token: string) {
+    return `${integrationConfig.publicAppUrl}/verify-email?token=${encodeURIComponent(token)}`;
+  }
+
+  buildPasswordResetUrl(token: string) {
+    return `${integrationConfig.publicAppUrl}/reset-password?token=${encodeURIComponent(token)}`;
+  }
+
+  async sendEmailVerification(to: string, token: string) {
+    const url = this.buildVerificationUrl(token);
+    return this.send({
+      to,
+      subject: 'تأیید ایمیل — اکادمی نکته',
+      text: `برای تأیید ایمیل خود از این لینک استفاده کنید: ${url}`,
+      html: `<p>برای تأیید ایمیل خود <a href="${url}">اینجا کلیک کنید</a>.</p><p>یا کد: <strong>${token}</strong></p>`
+    });
+  }
+
+  async sendPasswordReset(to: string, token: string) {
+    const url = this.buildPasswordResetUrl(token);
+    return this.send({
+      to,
+      subject: 'بازیابی رمز عبور — اکادمی نکته',
+      text: `برای تنظیم رمز جدید: ${url}`,
+      html: `<p>برای بازیابی رمز <a href="${url}">اینجا کلیک کنید</a>.</p>`
+    });
+  }
+  async sendParentWelcomeCredentials(input: {
+    to: string;
+    parentName: string;
+    studentName: string;
+    email: string;
+    password: string;
+  }) {
+    const loginUrl = `${integrationConfig.publicAppUrl}/login`;
+    return this.send({
+      to: input.to,
+      subject: 'Parent account created - Nokta Academy',
+      text: [
+        `Dear ${input.parentName || 'Parent'},`,
+        '',
+        `A parent account has been created for ${input.studentName}.`,
+        `Login URL: ${loginUrl}`,
+        `Email: ${input.email}`,
+        `Password: ${input.password}`,
+        '',
+        'Please sign in and change your password after the first login.'
+      ].join('\n'),
+      html: [
+        `<p>Dear ${input.parentName || 'Parent'},</p>`,
+        `<p>A parent account has been created for <strong>${input.studentName}</strong>.</p>`,
+        `<p><strong>Login URL:</strong> <a href="${loginUrl}">${loginUrl}</a></p>`,
+        `<p><strong>Email:</strong> ${input.email}<br><strong>Password:</strong> ${input.password}</p>`,
+        '<p>Please sign in and change your password after the first login.</p>'
+      ].join('')
+    });
+  }
+}
+
+export const emailService = new EmailService();

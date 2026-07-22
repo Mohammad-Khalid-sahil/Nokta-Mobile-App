@@ -1,0 +1,308 @@
+{"ts":"2026-06-28T19:30:03.351Z","level":"info","message":"Backend server started","metadata":{"host":"0.0.0.0","port":8081,"environment":"development","lanIp":"10.235.104.245","mobileApiUrl":"http://10.235.104.245:8081/api","database":"connected","integrations":{"email":"console","sms":"console","stripe":{"enabled":false,"liveReady":false,"mode":"sandbox"},"ai":{"enabled":false,"configured":false},"strict":false,"issues":[]}}}
+
+====================================
+SERVER STARTED SUCCESSFULLY
+====================================
+
+Host bind: 0.0.0.0
+Port: 8081
+Environment: development
+
+Network diagnostics:
+  ✓ Server Port: 8081
+  ✓ Server IP (LAN): 10.235.104.245
+  ✓ API URL (local): http://127.0.0.1:8081/api
+  ✓ Mobile Access URL: http://10.235.104.245:8081/api
+  ✓ Database: Connected (nokta_academy)
+  ✓ Server: Running
+
+Use this URL on physical phones (same Wi-Fi):
+  http://10.235.104.245:8081/api
+
+====================================
+
+[2026-06-29 00:00:05]
+GET /api/health
+Client: 10.235.104.245
+Status: 200
+Duration: 26ms
+
+[2026-06-29 00:00:17]
+GET /api/health
+Client: 10.235.104.245
+Status: 200
+Duration: 33ms
+
+[2026-06-29 00:00:24]
+GET /api/notifications/public
+Client: 10.235.104.245
+Status: 200
+Duration: 16ms
+
+[2026-06-29 00:00:24]
+GET /api/courses/public/home
+Client: 10.235.104.245
+Status: 200
+Duration: 15ms
+
+[2026-06-29 00:00:24]
+GET /api/classes/public/home
+Client: 10.235.104.245
+Status: 200
+Duration: 9ms
+
+[2026-06-29 00:00:45]
+GET /api
+Client: 127.0.0.1
+Status: 401
+Duration: 2ms
+
+[2026-06-29 00:12:58]
+GET /api/notifications/public
+Client: 10.235.104.161
+Status: 200
+Duration: 250ms
+
+[2026-06-29 00:12:58]
+GET /api/courses/public/home
+Client: 10.235.104.161
+Status: 200
+Duration: 212ms
+
+[2026-06-29 00:12:58]
+GET /api/classes/public/home
+Client: 10.235.104.161
+Status: 200
+Duration: 172ms
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+users
+
+Record ID:
+6a26f9319070af86c118acd6
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+session_tokens
+
+Record ID:
+6a4179a2394ea89e1497e189
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+audit_logs
+
+Record ID:
+6a4179a2394ea89e1497e18b
+
+User:
+anonymous
+
+[2026-06-29 00:14:34]
+POST /api/auth/login
+Client: 10.235.104.161
+Status: 200
+Duration: 406ms
+
+[2026-06-29 00:14:35]
+GET /api/dashboard/summary
+Client: 10.235.104.161
+Status: 401
+Duration: 2ms
+
+[2026-06-29 00:14:35]
+GET /api/student-messages/my-teacher
+Client: 10.235.104.161
+Status: 401
+Duration: 2ms
+
+[2026-06-29 00:14:35]
+GET /api/timetable
+Client: 10.235.104.161
+Status: 401
+Duration: 2ms
+
+[2026-06-29 00:14:35]
+GET /api/attendance/active-sessions
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:35]
+GET /api/ai-results/me
+Client: 10.235.104.161
+Status: 401
+Duration: 2ms
+
+[2026-06-29 00:14:38]
+GET /api/dashboard/summary
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:38]
+GET /api/student-messages/my-teacher
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:38]
+GET /api/timetable
+Client: 10.235.104.161
+Status: 401
+Duration: 0ms
+
+[2026-06-29 00:14:38]
+GET /api/attendance/active-sessions
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:38]
+GET /api/ai-results/me
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:39]
+GET /api/dashboard/summary
+Client: 10.235.104.161
+Status: 401
+Duration: 2ms
+
+[2026-06-29 00:14:39]
+GET /api/student-messages/my-teacher
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:39]
+GET /api/timetable
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:39]
+GET /api/attendance/active-sessions
+Client: 10.235.104.161
+Status: 401
+Duration: 2ms
+
+[2026-06-29 00:14:39]
+GET /api/ai-results/me
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:41]
+GET /api/dashboard/summary
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:41]
+GET /api/student-messages/my-teacher
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:41]
+GET /api/timetable
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:41]
+GET /api/attendance/active-sessions
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:41]
+GET /api/ai-results/me
+Client: 10.235.104.161
+Status: 401
+Duration: 2ms
+
+[2026-06-29 00:14:50]
+GET /api/messages/inbox
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:51]
+GET /api/results
+Client: 10.235.104.161
+Status: 401
+Duration: 2ms
+
+[2026-06-29 00:14:52]
+GET /api/timetable
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:14:52]
+GET /api/classes
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:16:04]
+GET /api/messages/inbox
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+
+[2026-06-29 00:16:06]
+GET /api/messages/inbox
+Client: 10.235.104.161
+Status: 401
+Duration: 1ms
+

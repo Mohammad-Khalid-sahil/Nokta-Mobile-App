@@ -1,0 +1,324 @@
+{"ts":"2026-07-14T12:16:44.269Z","level":"info","message":"Backend server started","metadata":{"host":"0.0.0.0","port":8081,"environment":"development","lanIp":"10.251.3.245","mobileApiUrl":"http://10.251.3.245:8081/api","database":"connected","integrations":{"email":"console","sms":"console","stripe":{"enabled":false,"liveReady":false,"mode":"sandbox"},"ai":{"enabled":false,"configured":false},"strict":false,"issues":[]}}}
+
+====================================
+SERVER STARTED SUCCESSFULLY
+====================================
+
+Host bind: 0.0.0.0
+Port: 8081
+Environment: development
+
+Network diagnostics:
+  ✓ Server Port: 8081
+  ✓ Server IP (LAN): 10.251.3.245
+  ✓ API URL (local): http://127.0.0.1:8081/api
+  ✓ Mobile Access URL: http://10.251.3.245:8081/api
+  ✓ Database: Connected (nokta_academy)
+  ✓ Server: Running
+
+Use this URL on physical phones (same Wi-Fi):
+  http://10.251.3.245:8081/api
+
+====================================
+
+[2026-07-14 16:47:36]
+GET /api/auth/register/options
+Client: 10.251.3.245
+Status: 200
+Duration: 23ms
+
+[2026-07-14 16:47:37]
+POST /api/auth/register/quote
+Client: 10.251.3.245
+Status: 200
+Duration: 8ms
+
+[2026-07-14 16:47:37]
+POST /api/auth/register/checkout
+Client: 10.251.3.245
+Status: 400
+Duration: 8ms
+
+[2026-07-14 16:47:37]
+POST /api/auth/register/confirm-payment
+Client: 10.251.3.245
+Status: 400
+Duration: 2ms
+
+[2026-07-14 16:47:37]
+POST /api/auth/register/student
+Client: 10.251.3.245
+Status: 400
+Duration: 2ms
+
+[2026-07-14 16:48:59]
+GET /api/auth/register/options
+Client: 10.251.3.245
+Status: 200
+Duration: 7ms
+
+[2026-07-14 16:48:59]
+POST /api/auth/register/quote
+Client: 10.251.3.245
+Status: 200
+Duration: 6ms
+
+[2026-07-14 16:48:59]
+POST /api/auth/register/checkout
+Client: 10.251.3.245
+Status: 200
+Duration: 13ms
+
+[2026-07-14 16:48:59]
+POST /api/auth/register/confirm-payment
+Client: 10.251.3.245
+Status: 200
+Duration: 11ms
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+Record ID:
+6a5629338a0f5a97b0b7de2f
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+users
+
+Record ID:
+6a5629338a0f5a97b0b7de31
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+parents
+
+Record ID:
+6a5629348a0f5a97b0b7de34
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+students
+
+Record ID:
+6a5629348a0f5a97b0b7de37
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+Record ID:
+6a5629338a0f5a97b0b7de2f
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+users
+
+Record ID:
+6a5629348a0f5a97b0b7de3a
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+enrollments
+
+Record ID:
+6a5629348a0f5a97b0b7de3c
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+users
+
+Record ID:
+6a5629338a0f5a97b0b7de31
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+users
+
+Record ID:
+6a5629348a0f5a97b0b7de3a
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+parents
+
+Record ID:
+6a5629348a0f5a97b0b7de34
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+family_links
+
+Record ID:
+6a5629354eef74b6b6ae23b9
+
+User:
+anonymous
+
+{"ts":"2026-07-14T12:19:01.323Z","level":"info","message":"Email (console mode)","metadata":{"to":"codex.parent.1784031539@example.com","subject":"Parent account created - Nokta Academy","preview":"Dear Codex Guardian,\n\nA parent account has been created for Codex Student.\nLogin URL: http://localhost:5173/login\nEmail: codex.parent.1784031539@example.com\nPassword: Parent@KCrnaH73PM9\n\nPlease sign in and change your password after the fir"}}
+DATABASE
+
+UPDATE
+
+Table:
+payments
+
+Record ID:
+6a5629358a0f5a97b0b7de43
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+Record ID:
+6a5629354eef74b6b6ae23ba
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+users
+
+Record ID:
+6a26f9319070af86c118acd4
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+users
+
+Record ID:
+6a26f9319070af86c118acd4
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+notifications
+
+Record ID:
+6a5629358a0f5a97b0b7de49
+
+User:
+anonymous
+
+[2026-07-14 16:49:02]
+POST /api/auth/register/student
+Client: 10.251.3.245
+Status: 201
+Duration: 2821ms
+
+[2026-07-14 16:49:34]
+GET /api/auth/register/options
+Client: 10.251.3.245
+Status: 200
+Duration: 7ms
+
+[2026-07-14 16:49:34]
+POST /api/auth/register/student
+Client: 10.251.3.245
+Status: 409
+Duration: 5ms
+

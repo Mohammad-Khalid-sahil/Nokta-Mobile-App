@@ -1,0 +1,513 @@
+{"ts":"2026-07-14T06:44:23.556Z","level":"info","message":"Backend server started","metadata":{"host":"0.0.0.0","port":8081,"environment":"development","lanIp":"10.251.3.245","mobileApiUrl":"http://10.251.3.245:8081/api","database":"connected","integrations":{"email":"console","sms":"console","stripe":{"enabled":false,"liveReady":false,"mode":"sandbox"},"ai":{"enabled":false,"configured":false},"strict":false,"issues":[]}}}
+
+====================================
+SERVER STARTED SUCCESSFULLY
+====================================
+
+Host bind: 0.0.0.0
+Port: 8081
+Environment: development
+
+Network diagnostics:
+  ✓ Server Port: 8081
+  ✓ Server IP (LAN): 10.251.3.245
+  ✓ API URL (local): http://127.0.0.1:8081/api
+  ✓ Mobile Access URL: http://10.251.3.245:8081/api
+  ✓ Database: Connected (nokta_academy)
+  ✓ Server: Running
+
+Use this URL on physical phones (same Wi-Fi):
+  http://10.251.3.245:8081/api
+
+====================================
+
+[2026-07-14 11:14:49]
+GET /api/health
+Client: 10.251.3.245
+Status: 200
+Duration: 21ms
+
+[2026-07-14 11:14:50]
+GET /api/classes/public/home
+Client: 10.251.3.245
+Status: 200
+Duration: 888ms
+
+[2026-07-14 11:14:50]
+GET /api/auth/register/options
+Client: 10.251.3.245
+Status: 200
+Duration: 905ms
+
+[2026-07-14 11:14:50]
+GET /api/courses/public/home
+Client: 10.251.3.245
+Status: 200
+Duration: 892ms
+
+[2026-07-14 11:14:50]
+GET /api/notifications/public
+Client: 10.251.3.245
+Status: 200
+Duration: 890ms
+
+[2026-07-14 11:14:59]
+POST /api/auth/login
+Client: 10.251.3.245
+Status: 401
+Duration: 35ms
+
+[2026-07-14 11:22:29]
+GET /api/notifications/public
+Client: 10.251.3.8
+Status: 304
+Duration: 27ms
+
+[MOBILE]
+Notifications Requested — Success
+User: anonymous
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:22:29]
+GET /api/courses/public/home
+Client: 10.251.3.8
+Status: 304
+Duration: 28ms
+
+[MOBILE]
+Course List Requested — Success
+User: anonymous
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:22:29]
+GET /api/classes/public/home
+Client: 10.251.3.8
+Status: 304
+Duration: 32ms
+
+[MOBILE]
+Class List Requested — Success
+User: anonymous
+Ip: 10.251.3.8
+Status: 304
+
+[MOBILE]
+User Login Attempt
+User: student1@nokta.com
+Ip: 10.251.3.8
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+users
+
+Record ID:
+6a26f9319070af86c118acd6
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+session_tokens
+
+Record ID:
+6a55dd0c47fe3a4630fb16fd
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+audit_logs
+
+Record ID:
+6a55dd0c47fe3a4630fb16ff
+
+User:
+anonymous
+
+[2026-07-14 11:24:04]
+POST /api/auth/login
+Client: 10.251.3.8
+Status: 200
+Duration: 651ms
+
+[MOBILE]
+User Login Success
+User: student1@nokta.com
+Ip: 10.251.3.8
+Status: 200
+
+[2026-07-14 11:24:06]
+GET /api/student-messages/my-teacher
+Client: 10.251.3.8
+Status: 304
+Duration: 95ms
+
+[2026-07-14 11:24:06]
+GET /api/dashboard/summary
+Client: 10.251.3.8
+Status: 200
+Duration: 190ms
+
+[MOBILE]
+Dashboard Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 200
+
+[2026-07-14 11:24:06]
+GET /api/ai-results/me
+Client: 10.251.3.8
+Status: 304
+Duration: 272ms
+
+[2026-07-14 11:24:06]
+GET /api/timetable
+Client: 10.251.3.8
+Status: 304
+Duration: 299ms
+
+[2026-07-14 11:24:06]
+GET /api/attendance/active-sessions
+Client: 10.251.3.8
+Status: 304
+Duration: 341ms
+
+[2026-07-14 11:24:14]
+GET /api/student-messages/my-teacher
+Client: 10.251.3.8
+Status: 304
+Duration: 88ms
+
+[2026-07-14 11:24:14]
+GET /api/dashboard/summary
+Client: 10.251.3.8
+Status: 304
+Duration: 100ms
+
+[MOBILE]
+Dashboard Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:24:14]
+GET /api/ai-results/me
+Client: 10.251.3.8
+Status: 304
+Duration: 81ms
+
+[2026-07-14 11:24:14]
+GET /api/timetable
+Client: 10.251.3.8
+Status: 304
+Duration: 111ms
+
+[2026-07-14 11:24:14]
+GET /api/attendance/active-sessions
+Client: 10.251.3.8
+Status: 304
+Duration: 108ms
+
+[2026-07-14 11:24:54]
+GET /api/classes
+Client: 10.251.3.8
+Status: 304
+Duration: 104ms
+
+[MOBILE]
+Classes Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:28:42]
+GET /api/timetable
+Client: 10.251.3.8
+Status: 304
+Duration: 45ms
+
+[2026-07-14 11:34:52]
+GET /api/courses
+Client: 10.251.3.8
+Status: 304
+Duration: 52ms
+
+[MOBILE]
+Courses Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:40:49]
+GET /api/classes
+Client: 10.251.3.8
+Status: 401
+Duration: 2ms
+
+[MOBILE]
+Classes Data Requested — Failed
+User: anonymous
+Ip: 10.251.3.8
+Status: 401
+
+[MOBILE]
+User Login Attempt
+User: student1@nokta.com
+Ip: 10.251.3.8
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+unknown
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+users
+
+Record ID:
+6a26f9319070af86c118acd6
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+session_tokens
+
+Record ID:
+6a55e12047fe3a4630fb17a3
+
+User:
+anonymous
+
+DATABASE
+
+UPDATE
+
+Table:
+audit_logs
+
+Record ID:
+6a55e12047fe3a4630fb17a5
+
+User:
+anonymous
+
+[2026-07-14 11:41:28]
+POST /api/auth/login
+Client: 10.251.3.8
+Status: 200
+Duration: 280ms
+
+[MOBILE]
+User Login Success
+User: student1@nokta.com
+Ip: 10.251.3.8
+Status: 200
+
+[2026-07-14 11:47:13]
+GET /api/courses
+Client: 10.251.3.8
+Status: 304
+Duration: 53ms
+
+[MOBILE]
+Courses Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:47:15]
+GET /api/courses
+Client: 10.251.3.8
+Status: 304
+Duration: 18ms
+
+[MOBILE]
+Courses Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:47:16]
+GET /api/courses
+Client: 10.251.3.8
+Status: 304
+Duration: 21ms
+
+[MOBILE]
+Courses Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:47:17]
+GET /api/courses
+Client: 10.251.3.8
+Status: 304
+Duration: 53ms
+
+[MOBILE]
+Courses Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:47:18]
+GET /api/courses
+Client: 10.251.3.8
+Status: 304
+Duration: 41ms
+
+[MOBILE]
+Courses Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:47:19]
+GET /api/courses
+Client: 10.251.3.8
+Status: 304
+Duration: 47ms
+
+[MOBILE]
+Courses Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:47:26]
+GET /api/courses
+Client: 10.251.3.8
+Status: 304
+Duration: 42ms
+
+[MOBILE]
+Courses Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:47:27]
+GET /api/courses
+Client: 10.251.3.8
+Status: 304
+Duration: 21ms
+
+[MOBILE]
+Courses Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:47:28]
+GET /api/courses
+Client: 10.251.3.8
+Status: 304
+Duration: 22ms
+
+[MOBILE]
+Courses Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:47:29]
+GET /api/courses
+Client: 10.251.3.8
+Status: 304
+Duration: 25ms
+
+[MOBILE]
+Courses Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+
+[2026-07-14 11:47:30]
+GET /api/courses
+Client: 10.251.3.8
+Status: 304
+Duration: 39ms
+
+[MOBILE]
+Courses Data Requested — Success
+User: student:6a26f9319070af86c118acd6
+Ip: 10.251.3.8
+Status: 304
+

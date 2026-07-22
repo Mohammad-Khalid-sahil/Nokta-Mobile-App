@@ -1,0 +1,24 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const strict_1 = __importDefault(require("node:assert/strict"));
+const timetableValidationService_1 = require("./timetableValidationService");
+strict_1.default.equal((0, timetableValidationService_1.hasTimeConflict)('08:00', '09:00', '08:30', '09:30'), true, 'partial overlap should conflict');
+strict_1.default.equal((0, timetableValidationService_1.hasTimeConflict)('08:00', '09:00', '07:30', '08:15'), true, 'early partial overlap should conflict');
+strict_1.default.equal((0, timetableValidationService_1.hasTimeConflict)('08:00', '09:00', '08:00', '09:00'), true, 'same slot should conflict');
+strict_1.default.equal((0, timetableValidationService_1.hasTimeConflict)('08:00', '09:00', '07:00', '08:00'), false, 'touching end/start is allowed');
+strict_1.default.equal((0, timetableValidationService_1.hasTimeConflict)('08:00', '09:00', '09:00', '10:00'), false, 'touching start/end is allowed');
+const klass = { _id: 'class-a', assignedSubjects: ['subject-a'], assignedTeachers: ['teacher-a'] };
+const subject = { _id: 'subject-a', classId: 'class-a', classIds: [] };
+const multiClassSubject = { _id: 'subject-b', classIds: ['class-a'] };
+const foreignSubject = { _id: 'subject-c', classId: 'class-b', classIds: [] };
+const teacher = { _id: 'teacher-a', assignedClasses: ['class-a'], assignedSubjects: ['subject-a'] };
+strict_1.default.equal((0, timetableValidationService_1.subjectBelongsToClass)(subject, klass), true, 'subject.classId should link subject to class');
+strict_1.default.equal((0, timetableValidationService_1.subjectBelongsToClass)(multiClassSubject, klass), true, 'subject.classIds should link subject to class');
+strict_1.default.equal((0, timetableValidationService_1.subjectBelongsToClass)(foreignSubject, klass), false, 'foreign subject should be rejected for class');
+strict_1.default.equal((0, timetableValidationService_1.teacherCanTeachClassSubject)(teacher, klass, subject), true, 'teacher assigned to class and subject can teach');
+strict_1.default.equal((0, timetableValidationService_1.teacherCanTeachClassSubject)({ _id: 'teacher-b', assignedClasses: [], assignedSubjects: [] }, klass, subject), false, 'unassigned teacher should be rejected');
+strict_1.default.throws(() => (0, timetableValidationService_1.hasTimeConflict)('09:00', '08:00', '08:00', '09:00'), /End time must be after start time/, 'invalid lesson window should fail');
+console.log('timetable validation tests passed');

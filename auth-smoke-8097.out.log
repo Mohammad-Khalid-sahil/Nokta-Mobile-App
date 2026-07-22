@@ -1,0 +1,29 @@
+{"ts":"2026-06-28T15:36:09.907Z","level":"info","message":"Backend server started","metadata":{"host":"0.0.0.0","port":8097,"environment":"development","lanIp":"10.235.104.245","mobileApiUrl":"http://10.235.104.245:8097/api","database":"connected","integrations":{"email":"console","sms":"console","stripe":{"enabled":false,"liveReady":false,"mode":"sandbox"},"ai":{"enabled":false,"configured":false},"strict":false,"issues":[]}}}
+
+====================================
+SERVER STARTED SUCCESSFULLY
+====================================
+
+Host bind: 0.0.0.0
+Port: 8097
+Environment: development
+
+Network diagnostics:
+  ✓ Server Port: 8097
+  ✓ Server IP (LAN): 10.235.104.245
+  ✓ API URL (local): http://127.0.0.1:8097/api
+  ✓ Mobile Access URL: http://10.235.104.245:8097/api
+  ✓ Database: Connected (nokta_academy)
+  ✓ Server: Running
+
+Use this URL on physical phones (same Wi-Fi):
+  http://10.235.104.245:8097/api
+
+====================================
+
+[2026-06-28 20:06:11]
+GET /api/health
+Client: 127.0.0.1
+Status: 200
+Duration: 19ms
+

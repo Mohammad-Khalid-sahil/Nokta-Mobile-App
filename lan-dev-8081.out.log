@@ -1,0 +1,4 @@
+
+> nokta-academy-backend@1.0.0 dev
+> nodemon --watch src --exec "node --max-old-space-size=4096 -r ts-node/register/transpile-only src/server.ts"
+
